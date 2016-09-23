@@ -30,15 +30,16 @@ class weixin{
         if ($tmpStr == $this->signature){
             return true;
         }else{
-            return false;
+            return $tmpStr;
         }
     }
 
     public function returnStr(){
         if ($this->checkaccess()){
-            echo $this->echostr;
+            echo $this->checkaccess()."==".$this->signature;
+//            echo $this->echostr;
         }else{
-            echo '对比错误！'.$this->echostr ;
+            echo '对比错误！';
         }
     }
 
