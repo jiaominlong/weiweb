@@ -38,7 +38,7 @@ class weixin{
         if ($this->checkaccess()){
             echo $this->echostr;
         }else{
-            echo '对比错误！';
+            echo '对比错误！'.$this->timestamp ;
         }
     }
 
