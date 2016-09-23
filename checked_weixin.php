@@ -25,8 +25,8 @@ class weixin{
 
     private function checkaccess(){
         $arr = array(TOKEN, $this->timestamp, $this->nonce);
-        $tmpStr = implode(sort($arr, SORT_STRING));
-        $tmpStr = sha1($tmpStr);
+        sort($arr, SORT_STRING);
+        $tmpStr = sha1(implode($arr));
         if ($tmpStr == $this->signature){
             return true;
         }else{
@@ -36,10 +36,9 @@ class weixin{
 
     public function returnStr(){
         if ($this->checkaccess()){
-            echo $this->checkaccess()."==".$this->signature;
-//            echo $this->echostr;
+            return $this->echostr;
         }else{
-            echo '对比错误！';
+            return false;
         }
     }
 
