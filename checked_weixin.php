@@ -36,9 +36,9 @@ class weixin{
 
     public function returnStr(){
         if ($this->checkaccess()){
-            return $this->echostr;
+            echo $this->echostr;
         }else{
-            return false;
+            echo '对比错误！';
         }
     }
 
