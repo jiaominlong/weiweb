@@ -31,7 +31,8 @@ class weixin{
             return true;
         }else{
             return $tmpStr;
-        }}
+        }
+    }
 
     public function returnStr(){
         if ($this->checkaccess()){

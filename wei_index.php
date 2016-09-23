@@ -35,7 +35,7 @@ require_once 'checked_weixin.php';
         $signature  =   $_GET['signature'];
         $echostr    =   $_GET['echostr'];
         $wx = new weixin($timestamp, $nonce, $signature, $echostr);
-        $wx->returnStr();
+        echo $wx->returnStr();
     }else{
         echo 'test';
     }
